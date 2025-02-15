@@ -8,7 +8,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    background: #5d8b00;
+    background: #a27a14;
     padding: 1rem;
 }
 nav ul li a {
@@ -18,7 +18,7 @@ nav ul li a {
 }
 .hero {
     text-align: center;
-    background: url('../images/hero.webp') no-repeat center center/cover;
+    background: url('../images/hero.jpg') no-repeat center center/cover;
     height: 50vh;
     color: rgb(42, 136, 69);
     display: flex;
