@@ -1,28 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boston Bengali Organization</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bengali Social Organization</title>
+  <!-- Link to the stylesheet in the "styles" folder -->
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/logo.webp" alt="Boston Bengali Logo">
+  <!-- Sticky Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.webp" alt="Organization Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#homepage">Homepage</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner Carousel -->
+  <section id="hero">
+    <div class="carousel">
+      <div class="slide active">
+        <img src="images/hero1.webp" alt="Hero Image 1" />
+        <div class="overlay">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-    </section>
+      </div>
+      <div class="slide">
+        <img src="images/hero2.jpg" alt="Hero Image 2" />
+        <div class="overlay">
+          <h1>Join Our Vibrant Events</h1>
+          <p>Experience culture, art, and tradition</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/hero3.jpg" alt="Hero Image 3" />
+        <div class="overlay">
+          <h1>Connect With Like-Minded People</h1>
+          <p>Community events and gatherings</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </section>
+
+  <!-- Current Event Section -->
+  <section id="current-event">
+    <div class="container event-section">
+      <div class="event-image">
+        <img src="images/event.png" alt="Current Event" />
+      </div>
+      <div class="event-details">
+        <h2>Baiskahi 2025</h2>
+        <p>
+            Join us to celebrate Baisakhi in our 2nd year of Bengali New Year Celebrations! 
+        </p>
+        <a href="https://forms.gle/PqDdxFcZojNR9Eom6" class="register-btn">Register Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Social Media -->
+  <footer>
+    <div class="container footer-container">
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook-icon.svg" alt="Facebook" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram-icon.svg" alt="Instagram" />
+        </a>
+      </div>
+      <p>&copy; 2025 Bengali Social Organization. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
