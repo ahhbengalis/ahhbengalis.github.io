@@ -10,7 +10,7 @@ body {
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Provides a little gap to the left */
+    padding: 0 20px;
   }
   
   /* Sticky Header */
@@ -34,14 +34,13 @@ body {
     padding: 10px 0;
   }
   .logo img {
-    height: 80px; /* Increased size for a bigger logo */
+    height: 80px; /* Bigger logo */
   }
   
   /* Reduced gap between logo and menu */
   nav {
     margin-left: 10px;
   }
-  
   .menu {
     list-style: none;
     display: flex;
@@ -56,7 +55,7 @@ body {
     transition: color 0.3s ease;
   }
   .menu li a:hover {
-    color: #3498db; /* Accent color */
+    color: #3498db;
   }
   
   /* Hero Banner Carousel */
@@ -81,13 +80,8 @@ body {
     width: 100%;
     display: block;
   }
-  .overlay {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
+  
+  /* Carousel Controls */
   .carousel-controls {
     position: absolute;
     top: 50%;
@@ -107,9 +101,9 @@ body {
   }
   
   /* Current Event Section */
-#current-event {
+  #current-event {
     padding: 40px 0;
-    background: #fdfdfd; /* Optional: a very light background to highlight the section */
+    background: #fdfdfd; /* Light background for emphasis */
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
   }
@@ -118,7 +112,7 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    flex-wrap: nowrap; /* Keep image and text side-by-side on wider screens */
+    flex-wrap: nowrap; /* Side-by-side on larger screens */
   }
   
   /* Limit the event image to a specific width */
@@ -126,7 +120,7 @@ body {
     flex: 0 0 auto;
   }
   .event-image img {
-    max-width: 400px;  /* Adjust width as needed */
+    max-width: 400px;
     width: 100%;
     border-radius: 8px;
   }
@@ -156,7 +150,7 @@ body {
     color: #2c3e50;
   }
   
-  /* Bigger and prominent register button */
+  /* Prominent register button */
   .register-btn {
     display: inline-block;
     font-size: 1.2em;
@@ -171,18 +165,6 @@ body {
     transform: scale(1.05);
     background: #2980b9;
   }
-  
-  /* Responsive Design for Event Section */
-  @media (max-width: 768px) {
-    .event-section {
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
-    .event-image img {
-      max-width: 100%;
-    }
-  }
-  
   
   /* Footer */
   footer {
@@ -205,7 +187,9 @@ body {
     transform: scale(1.1);
   }
   
-  /* Responsive Design */
+  /* Responsive Design for Laptops and Mobile */
+  
+  /* For screens up to 768px */
   @media (max-width: 768px) {
     .header-container {
       flex-direction: row;
@@ -213,11 +197,40 @@ body {
     }
     .menu {
       flex-wrap: wrap;
-      justify-content: center;
       gap: 10px;
     }
     .event-section {
       flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .event-image img {
+      max-width: 100%;
+    }
+  }
+  
+  /* For screens up to 480px (smaller mobile devices) */
+  @media (max-width: 480px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .menu {
+      flex-direction: column;
+      width: 100%;
+    }
+    .menu li {
+      margin-bottom: 10px;
+    }
+    .event-details h2 {
+      font-size: 2em;
+    }
+    .event-details p {
+      font-size: 1em;
+    }
+    .register-btn {
+      font-size: 1em;
+      padding: 12px 24px;
     }
   }
   
