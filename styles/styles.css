@@ -30,14 +30,28 @@ body {
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 10px 0;
   }
   .logo img {
     height: 80px; /* Bigger logo */
   }
   
-  /* Reduced gap between logo and menu */
+  /* Hamburger Menu */
+  .hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Navigation Menu */
   nav {
     margin-left: 10px;
   }
@@ -187,18 +201,35 @@ body {
     transform: scale(1.1);
   }
   
-  /* Responsive Design for Laptops and Mobile */
+  /* Responsive Design */
   
   /* For screens up to 768px */
   @media (max-width: 768px) {
     .header-container {
       flex-direction: row;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: space-between;
     }
-    .menu {
-      flex-wrap: wrap;
-      gap: 10px;
+    
+    /* Show hamburger menu and hide full menu */
+    .hamburger {
+      display: flex;
     }
+    nav .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+    nav .menu.active {
+      display: flex;
+    }
+    
+    /* Adjust menu item spacing on mobile */
+    .menu li {
+      margin: 10px 0;
+    }
+    
     .event-section {
       flex-direction: column;
       align-items: center;
@@ -233,4 +264,5 @@ body {
       padding: 12px 24px;
     }
   }
+  
   
