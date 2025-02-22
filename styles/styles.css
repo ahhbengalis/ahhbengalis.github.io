@@ -109,13 +109,16 @@ body {
   /* Current Event Section */
 #current-event {
     padding: 40px 0;
+    background: #fdfdfd; /* Optional: a very light background to highlight the section */
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
   }
   
   .event-section {
     display: flex;
     align-items: center;
     gap: 30px;
-    flex-wrap: nowrap; /* Ensure side-by-side layout on wider screens */
+    flex-wrap: nowrap; /* Keep image and text side-by-side on wider screens */
   }
   
   /* Limit the event image to a specific width */
@@ -123,7 +126,7 @@ body {
     flex: 0 0 auto;
   }
   .event-image img {
-    max-width: 400px;  /* Adjust this value as needed */
+    max-width: 400px;  /* Adjust width as needed */
     width: 100%;
     border-radius: 8px;
   }
@@ -134,13 +137,23 @@ body {
     padding: 20px;
   }
   .event-details h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  .event-details .event-tagline {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #34495e;
   }
   .event-details p {
     font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  .event-details p strong {
+    color: #2c3e50;
   }
   
   /* Bigger and prominent register button */
