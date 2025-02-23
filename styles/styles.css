@@ -241,7 +241,7 @@ body {
       text-align: center;
     }
     .event-image img {
-      max-width: 100%;
+      max-width: 50%;
     }
   }
   
@@ -268,6 +268,9 @@ body {
     .register-btn {
       font-size: 1em;
       padding: 12px 24px;
+    }
+    .event-image img {
+        max-width: 50%;
     }
   }
   
