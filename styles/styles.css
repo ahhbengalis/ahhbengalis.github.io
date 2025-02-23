@@ -30,11 +30,16 @@ body {
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between logo and hamburger/menu */
+    justify-content: space-between; /* Keeps logo and hamburger on opposite sides */
     padding: 10px 0;
+    flex-wrap: nowrap; /* Prevents wrapping */
+  }
+  .logo {
+    flex: 1;
   }
   .logo img {
     height: 80px;
+    max-width: 100%;
   }
   
   /* Hamburger Menu */
@@ -42,6 +47,8 @@ body {
     display: none; /* Hidden on desktop */
     flex-direction: column;
     cursor: pointer;
+    z-index: 1001; /* Ensures it's clickable above other elements */
+    /* No extra margin, so it stays on the right */
   }
   .hamburger .bar {
     height: 3px;
@@ -198,7 +205,7 @@ body {
     transform: scale(1.1);
   }
   
-  /* Responsive Design for Mobile Devices */
+  /* Responsive Design */
   
   /* For screens up to 768px */
   @media (max-width: 768px) {
@@ -206,12 +213,11 @@ body {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: nowrap; /* Keep logo and hamburger in one row */
     }
     /* Show hamburger menu and hide full menu by default */
     .hamburger {
       display: flex;
-      /* Align hamburger to the right */
-      order: 3;
     }
     nav .menu {
       display: none;
@@ -238,8 +244,9 @@ body {
   /* For screens up to 480px */
   @media (max-width: 480px) {
     .header-container {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row; /* Still keep in one row if possible */
+      align-items: center;
+      justify-content: space-between;
     }
     .menu {
       flex-direction: column;
