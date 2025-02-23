@@ -207,17 +207,21 @@ body {
   
   /* Responsive Design */
   
-  /* For screens up to 768px */
   @media (max-width: 768px) {
     .header-container {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: nowrap; /* Keep logo and hamburger in one row */
+      flex-wrap: nowrap;
     }
     /* Show hamburger menu and hide full menu by default */
     .hamburger {
       display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+      /* Increase touch area */
+      padding: 10px;
     }
     nav .menu {
       display: none;
@@ -226,7 +230,7 @@ body {
       margin-top: 10px;
     }
     nav .menu.active {
-      display: flex;
+      display: flex !important;
     }
     .menu li {
       margin: 10px 0;
