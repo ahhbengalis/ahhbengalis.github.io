@@ -26,15 +26,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   
-  /* Header Container: left aligning logo and menu */
+  /* Header Container */
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures space between logo and hamburger/menu */
     padding: 10px 0;
   }
   .logo img {
-    height: 80px; /* Bigger logo */
+    height: 80px;
   }
   
   /* Hamburger Menu */
@@ -117,7 +117,7 @@ body {
   /* Current Event Section */
   #current-event {
     padding: 40px 0;
-    background: #fdfdfd; /* Light background for emphasis */
+    background: #fdfdfd;
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
   }
@@ -126,10 +126,9 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    flex-wrap: nowrap; /* Side-by-side on larger screens */
+    flex-wrap: nowrap;
   }
   
-  /* Limit the event image to a specific width */
   .event-image {
     flex: 0 0 auto;
   }
@@ -139,7 +138,6 @@ body {
     border-radius: 8px;
   }
   
-  /* Prominent event details */
   .event-details {
     flex: 1;
     padding: 20px;
@@ -164,7 +162,6 @@ body {
     color: #2c3e50;
   }
   
-  /* Prominent register button */
   .register-btn {
     display: inline-block;
     font-size: 1.2em;
@@ -201,7 +198,7 @@ body {
     transform: scale(1.1);
   }
   
-  /* Responsive Design */
+  /* Responsive Design for Mobile Devices */
   
   /* For screens up to 768px */
   @media (max-width: 768px) {
@@ -210,10 +207,11 @@ body {
       align-items: center;
       justify-content: space-between;
     }
-    
-    /* Show hamburger menu and hide full menu */
+    /* Show hamburger menu and hide full menu by default */
     .hamburger {
       display: flex;
+      /* Align hamburger to the right */
+      order: 3;
     }
     nav .menu {
       display: none;
@@ -224,12 +222,9 @@ body {
     nav .menu.active {
       display: flex;
     }
-    
-    /* Adjust menu item spacing on mobile */
     .menu li {
       margin: 10px 0;
     }
-    
     .event-section {
       flex-direction: column;
       align-items: center;
@@ -240,7 +235,7 @@ body {
     }
   }
   
-  /* For screens up to 480px (smaller mobile devices) */
+  /* For screens up to 480px */
   @media (max-width: 480px) {
     .header-container {
       flex-direction: column;
@@ -264,5 +259,4 @@ body {
       padding: 12px 24px;
     }
   }
-  
   

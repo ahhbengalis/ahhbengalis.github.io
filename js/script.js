@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Carousel functionality (existing code)
+    // Carousel functionality
     const slides = document.querySelectorAll(".slide");
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slideInterval = setInterval(showNextSlide, 5000);
     });
   
-    // Hamburger menu toggle (new code)
+    // Hamburger menu toggle
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector("nav .menu");
   
