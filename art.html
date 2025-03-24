@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art Exhibition | Hashi Khushi of Greater Boston</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <style>
+    /* Inline styles for demonstration; you can move these to your styles.css */
+    .art-exhibition-container {
+      display: flex;
+      gap: 30px;
+      padding: 40px 0;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .art-exhibition-image {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+    .art-exhibition-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .art-exhibition-details {
+      flex: 1 1 50%;
+    }
+    .art-exhibition-details .exhibition-title {
+      font-size: 2.5em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .art-exhibition-details h2 {
+      margin-top: 20px;
+      color: #2c3e50;
+    }
+    .art-exhibition-details ul, 
+    .art-exhibition-details ol {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+    /* For smaller screens, stack the columns */
+    @media (max-width: 768px) {
+      .art-exhibition-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .art-exhibition-details {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header (same as your index.html) -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.webp" alt="Organization Logo" />
+        </a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Homepage</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content: Art Exhibition Information -->
+  <main>
+    <div class="container art-exhibition-container">
+      <!-- Left Section: Exhibition Image -->
+      <div class="art-exhibition-image">
+        <img src="images/art_exhibit.webp" alt="Art Exhibition" />
+      </div>
+      <!-- Right Section: Exhibition Details -->
+      <div class="art-exhibition-details">
+        <h1 class="exhibition-title">Chhobi Te Baisakh: Hashi Khushi's Baisakhi 2025 Kid's Art Exhibition</h1>
+        <p class="top-line">
+          Let’s pass down the vibrant spirit of Bengali Naboborsho to the next generation! This kids' art exhibition is a heartfelt tribute to our roots, where young artists express the joy of family, friendship, and tradition through their creativity.
+        </p>
+        <h2>Theme: Baisakhi art exhibition</h2>
+        <ul>
+          <li>Naboborsho or Baisakhi themed painting or artwork that celebrates our culture, family and friendship</li>
+          <li>Painting or artwork size – up to 16” by 20”</li>
+        </ul>
+        <h2>Eligibility:</h2>
+        <ol>
+          <li>8 to 16 year old.</li>
+          <li>Person or family must be registered and paid for event.</li>
+          <li>One painting per participant. Can have multiple participants in the same family registration.</li>
+          <li>First 20 entrants will be considered.</li>
+          <li>Should confirm participation email or registration form by April 15th.</li>
+          <li>Should be able to provide artwork by May 3rd.</li>
+        </ol>
+        <h2>Submission and return process:</h2>
+        <ul>
+          <li>We will coordinate collecting the artwork from participants via email.</li>
+          <li>You may take the artwork back with you at the end of the event.</li>
+        </ul>
+        <h2>What we will need besides artwork:</h2>
+        <ul>
+          <li>We plan to display the artwork to recognize and give credit to the creator, but the details provided are at the discretion of the creators and their families/guardians.</li>
+          <li>We are asking for:
+            <ul>
+              <li>Name</li>
+              <li>Town</li>
+              <li>School name</li>
+              <li>Grade</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Disclaimer:</h2>
+        <p>
+          While we will take utmost care of the artwork, we are not responsible for any damage. In the least, we may need to pin them to the exhibition wall. Thank you for your understanding.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (same as your index.html) -->
+  <footer>
+    <div class="container footer-container">
+      <div class="social-media">
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook-icon.svg" alt="Facebook" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram-icon.svg" alt="Instagram" />
+        </a>
+      </div>
+      <p>&copy; 2025 Hashi Khushi of Greater Boston. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
