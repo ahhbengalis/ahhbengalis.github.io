@@ -124,12 +124,17 @@
     }
 
     /* Responsive Adjustments */
+    
     @media (max-width: 768px) {
-      .horizontal-section, .fifth-section {
-        flex-direction: column;
-        text-align: center;
-      }
+        .horizontal-section,
+        .horizontal-section.reverse, .fifth-section
+        {
+            flex-direction: column !important;
+            text-align: center;
+        }
     }
+
+    
   </style>
 </head>
 <body>
