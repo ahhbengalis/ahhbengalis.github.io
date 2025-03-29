@@ -40,8 +40,8 @@
       text-align: center;
     }
     .section-image img {
-      max-width: 100%;
-      border-radius: 10px;
+      max-width: 60%;
+      border-radius: 50px;
     }
     .section-text {
       flex: 1;
@@ -103,18 +103,26 @@
     }
     /* Floating Register Button */
     .floating-register {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #e74c3c;
-      color: #fff;
-      padding: 15px 25px;
-      font-size: 1.2em;
-      border-radius: 5px;
-      text-decoration: none;
-      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-      z-index: 1000;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        background-color: #e74c3c; /* A vibrant red color */
+        color: white;
+        padding: 15px 25px; /* Increase padding for a bigger button */
+        font-size: 1.5em; /* Make text larger */
+        font-weight: bold;
+        border-radius: 20px; /* Rounded edges */
+        text-decoration: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow for emphasis */
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
     }
+
+    .floating-register:hover {
+        background-color: #c0392b; /* Darker red for hover effect */
+        transform: scale(1.1); /* Slightly increase size on hover */
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .horizontal-section, .fifth-section {
@@ -240,7 +248,7 @@
   </section>
 
   <!-- Floating Register Button -->
-  <a href="https://forms.gle/gAUwmYTHf2D3aofW7" class="floating-register" target="_blank">Register</a>
+  <a href="https://forms.gle/gAUwmYTHf2D3aofW7" class="floating-register" target="_blank">Register Now</a>
 
    <!-- Footer (same as your index.html) -->
    <footer>
