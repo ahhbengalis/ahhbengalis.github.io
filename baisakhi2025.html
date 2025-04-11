@@ -134,6 +134,49 @@
         }
     }
 
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+
+    .clickable-food-img {
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .clickable-food-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
     
   </style>
 </head>
@@ -223,7 +266,7 @@
   <!-- Horizontal Section 5: Kids Song and Dance Performances -->
   <section class="horizontal-section">
     <div class="section-image">
-      <img src="images/food.jpg" alt="">
+      <img src="images/food.jpg" alt="" class="clickable-food-img">
     </div>
     <div class="section-text">
       <h2>Bengali Food Mela</h2>
@@ -246,6 +289,12 @@
         <li>... and many more</li>
       </ul>
     </div>
+
+    <div id="foodModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalFoodImg" />
+    </div>
+
     <!-- Part 2: Art Exhibition Promotion --> 
     <div class="art-exhibit">
       <h2>Chhobite Baisakh: Kid's Art Exhibition</h2>

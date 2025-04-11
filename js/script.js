@@ -50,5 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("active");
       });
     }
+
+    const modal = document.getElementById("foodModal");
+    const img = document.querySelector(".clickable-food-img");
+    const modalImg = document.getElementById("modalFoodImg");
+    const span = document.querySelector(".modal .close");
+  
+    if (img) {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      };
+    }
+  
+    if (span) {
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    }
+  
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+    
   });
   
